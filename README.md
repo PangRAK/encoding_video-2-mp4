@@ -14,9 +14,13 @@
 아래 “타깃 인코딩 스펙”으로 저장되도록 코드를 적용하세요.
 
 [타깃 인코딩 스펙]
-- 비디오 코덱: H.264/AVC (libx264), profile=high
+- 컨테이너: MP4
+- 비디오 코덱: H.264/AVC (libx264), profile=high, pix_fmt=yuv420p
+- 프레임레이트: 원본 유지 (변경 없음)
 - 비트레이트: 약 2420 kbps (b:v=2420k, maxrate=2420k, bufsize=4840k)
 - B-frames: 2 (bf=2)
+- 오디오: 제거(-an)
+- MP4 최적화: faststart (+faststart)
 ```
 
 ## 주요 기능
@@ -73,7 +77,7 @@ python main.py /path/to/folder --dry-run
 - 비디오 코덱: H.264 (`libx264`)
 - 프로파일: `high`
 - 픽셀 포맷: `yuv420p`
-- 프레임레이트: 2 fps
+- 프레임레이트: 원본 유지
 - 비트레이트: 2420k (maxrate 2420k, bufsize 4840k)
 - B-frames: 2
 - 오디오 제거: `-an`

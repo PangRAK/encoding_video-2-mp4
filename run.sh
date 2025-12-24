@@ -1,5 +1,5 @@
 python main.py \
-"/Users/pia/Downloads/soop_ImageBind_eating/inference" \
+"/Users/pia/Downloads/" \
 # --keep-original \ 
 # --recursive \
 # --dry-run 
